@@ -3,7 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Raquel Ferreira | IT & Cyber Portfolio</title>
+    <title>Raquel Ferreira | IT, Cyber & UX Portfolio</title>
+    
+    </script>
     <style>
         /* Smooth, Modern Cyber System Aesthetics */
         :root {
@@ -27,7 +29,7 @@
             overflow-x: hidden;
         }
 
-        /* Ambient background glow */
+        /* Ambient background glow elements */
         body::before {
             content: '';
             position: absolute;
@@ -74,7 +76,7 @@
             line-height: 1.6;
         }
 
-        /* Premium Dashboard Skill Bar */
+        /* Skills Matrix Badge Area */
         .skills-matrix {
             max-width: 1100px;
             margin: 0 auto 60px auto;
@@ -91,7 +93,6 @@
             border-radius: 20px;
             font-size: 0.85rem;
             font-weight: 500;
-            letter-spacing: 0.5px;
             color: var(--text-main);
             transition: all 0.3s ease;
         }
@@ -102,21 +103,13 @@
             transform: translateY(-2px);
         }
 
-        .matrix-badge span {
-            color: var(--accent-green);
-            margin-right: 4px;
-        }
-
-        .container {
-            max-width: 1100px;
-            margin: auto;
-            padding: 0 20px;
-        }
+        .matrix-badge span { color: var(--accent-green); margin-right: 4px; }
+        .container { max-width: 1100px; margin: auto; padding: 0 20px; }
 
         h2 {
             font-size: 1.8rem;
             font-weight: 700;
-            letter-spacing: -0.5px;
+            margin-top: 60px;
             margin-bottom: 30px;
             display: flex;
             align-items: center;
@@ -130,12 +123,11 @@
             background: linear-gradient(90deg, rgba(255,255,255,0.1), transparent);
         }
 
-        /* Interactive Windows / Grid Structure */
+        /* Dynamic Media Project Cards Grid */
         .grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
             gap: 30px;
-            margin-top: 20px;
         }
 
         .window-card {
@@ -152,7 +144,6 @@
             box-shadow: 0 20px 40px rgba(0,0,0,0.4), 0 0 30px rgba(0, 242, 254, 0.05);
         }
 
-        /* Code Window Header Mockup */
         .window-bar {
             background: rgba(255,255,255,0.02);
             padding: 12px 20px;
@@ -162,87 +153,93 @@
             justify-content: space-between;
         }
 
-        .window-dots {
-            display: flex;
-            gap: 6px;
-        }
-
-        .dot {
-            width: 10px;
-            height: 10px;
-            border-radius: 50%;
-            background: rgba(255,255,255,0.2);
-        }
-        
+        .window-dots { display: flex; gap: 6px; }
+        .dot { width: 10px; height: 10px; border-radius: 50%; background: rgba(255,255,255,0.2); }
         .window-card:hover .dot:nth-child(1) { background: #ff5f56; }
         .window-card:hover .dot:nth-child(2) { background: #ffbd2e; }
         .window-card:hover .dot:nth-child(3) { background: #27c93f; }
-
-        .window-title {
-            font-family: 'Courier New', Courier, monospace;
-            font-size: 0.8rem;
-            color: var(--text-muted);
+        .window-title { font-family: 'Courier New', Courier, monospace; font-size: 0.8rem; color: var(--text-muted); }
+        
+        .project-media {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            background: #111a36;
+            border-bottom: 1px solid rgba(255,255,255,0.04);
         }
 
-        .window-body {
-            padding: 30px;
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+            height: 0;
+            overflow: hidden;
         }
 
-        .window-body h3 {
-            margin: 0 0 10px 0;
-            font-size: 1.4rem;
-            font-weight: 600;
-            color: #ffffff;
+        .video-container iframe {
+            position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0;
         }
 
-        .window-body p {
-            color: var(--text-muted);
-            font-size: 0.95rem;
-            line-height: 1.6;
-            margin: 0 0 20px 0;
-        }
-
-        /* Framework Stack Tags */
-        .tech-stack {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 8px;
-            margin-bottom: 25px;
-        }
-
+        .window-body { padding: 25px; }
+        .window-body h3 { margin: 0 0 10px 0; font-size: 1.3rem; color: #ffffff; }
+        .window-body p { color: var(--text-muted); font-size: 0.95rem; line-height: 1.6; margin: 0 0 20px 0; }
+        
         .stack-tag {
             font-family: 'Courier New', Courier, monospace;
             font-size: 0.75rem;
-            background: rgba(255,255,255,0.03);
-            border: 1px solid rgba(255,255,255,0.08);
-            color: var(--text-muted);
+            background: rgba(0, 242, 254, 0.05);
+            border: 1px solid rgba(0, 242, 254, 0.15);
+            color: var(--accent-cyan);
             padding: 4px 10px;
             border-radius: 4px;
         }
 
-        /* Action Buttons */
-        .action-link {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            color: var(--accent-cyan);
-            text-decoration: none;
+        /* Professional Timeline: Goals & Journey Path */
+        .timeline {
+            position: relative;
+            max-width: 800px;
+            margin: 40px 0;
+            padding-left: 30px;
+            border-left: 2px solid rgba(255,255,255,0.05);
+        }
+
+        .timeline-item {
+            position: relative;
+            margin-bottom: 40px;
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -37px;
+            top: 4px;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: var(--bg-base);
+            border: 2px solid var(--accent-green);
+            box-shadow: 0 0 10px var(--accent-green);
+        }
+
+        .timeline-year {
+            font-family: 'Courier New', Courier, monospace;
             font-size: 0.9rem;
-            font-weight: 600;
-            transition: color 0.2s ease;
-        }
-
-        .action-link:hover {
             color: var(--accent-green);
+            font-weight: bold;
+            margin-bottom: 5px;
         }
 
-        .action-link::after {
-            content: '→';
-            transition: transform 0.2s ease;
+        .timeline-title {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: #ffffff;
+            margin: 0 0 8px 0;
         }
 
-        .action-link:hover::after {
-            transform: translateX(4px);
+        .timeline-desc {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            line-height: 1.6;
+            margin: 0;
         }
 
         footer {
@@ -257,71 +254,46 @@
             color: var(--text-muted);
         }
 
-        footer a {
-            color: var(--text-main);
-            text-decoration: none;
-            position: relative;
-        }
-
-        footer a::after {
-            content: '';
-            position: absolute;
-            width: 100%;
-            transform: scaleX(0);
-            height: 1px;
-            bottom: -2px;
-            left: 0;
-            background-color: var(--accent-cyan);
-            transform-origin: bottom right;
-            transition: transform 0.25s ease-out;
-        }
-
-        footer a:hover::after {
-            transform: scaleX(1);
-            transform-origin: bottom left;
-        }
-
-        @media (max-width: 768px) {
-            h1 { font-size: 2.5rem; }
-            footer { flex-direction: column; gap: 15px; text-align: center; }
-        }
+        footer a { color: var(--text-main); text-decoration: none; font-weight: bold; }
+        footer a:hover { color: var(--accent-cyan); }
     </style>
 </head>
 <body>
 
     <header>
-        <div class="system-status">// SYSTEM SECURE // SYSTEM.ENVIRONMENT = LIVE</div>
+        <div class="system-status">// PORTFOLIO INTERFACE CONFIGURATION Active //</div>
         <h1>Raquel Ferreira</h1>
-        <p class="subtitle">Computer Science professional crafting high-end web applications, interactive software, and fortified security architectures.</p>
+        <p class="subtitle">Computer Science engineer crafting sleek web applications, high-performance software code, and robust cybersecurity layers.</p>
     </header>
 
-    <!-- Professional Skills Matrix -->
     <div class="skills-matrix">
         <div class="matrix-badge"><span>✓</span> Computer Science</div>
         <div class="matrix-badge"><span>✓</span> Web Developer</div>
         <div class="matrix-badge"><span>✓</span> Web Design</div>
         <div class="matrix-badge"><span>✓</span> App Developer</div>
         <div class="matrix-badge"><span>✓</span> UX/UI Designer</div>
-        <div class="matrix-badge"><span>✓</span> Code Optimization</div>
         <div class="matrix-badge"><span>✓</span> Cybersecurity</div>
     </div>
 
     <div class="container">
         
-        <h2>Featured Production Work</h2>
-        <div class="grid">
+        <!-- Live Project Production Feed -->
+        <h2>// Active Production Projects_</h2>
+        <div class="grid" id="projects-feed">
+            <!-- Decap CMS Admin uploads load inside here dynamically -->
             
-            <!-- Window 1: Advanced Web System -->
+            <!-- Default Static Placeholder 1 -->
             <div class="window-card">
                 <div class="window-bar">
                     <div class="window-dots"><div class="dot"></div><div class="dot"></div><div class="dot"></div></div>
-                    <div class="window-title">web_app_controller.js</div>
+                    <div class="window-title">system_secure.py</div>
                 </div>
                 <div class="window-body">
-                    <h3>Enterprise Web Architecture</h3>
-                    <p>Fusing custom frontend UI layouts with rock-solid server performance. Fully optimized for high-performance speeds and flawless browser layout responsiveness.</p>
-                    <div class="tech-stack">
-                        <span class="stack-tag">React</span>
-                        <span class="stack-tag">Node.js</span>
-                        <span class="stack-tag">UX Research</span>
-                    </div>
+                    <h3>Cyber Security Shield</h3>
+                    <span class="stack-tag">Cybersecurity</span>
+                    <p style="margin-top: 15px;">Automated security validations configured to scan system vulnerabilities and encrypt asset workflows safely.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Vision and Journey Path Tracking Section -->
