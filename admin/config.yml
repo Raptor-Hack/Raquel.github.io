@@ -17,7 +17,7 @@ collections:
       - { label: "Category Skill Tag", name: "tag", widget: "select", options: ["Computer Science", "Web Developer", "Web Design", "App Developer", "UX Designer", "Cybersecurity"] }
       - { label: "Project Summary", name: "body", widget: "text" }
       - { label: "Upload Feature Image", name: "image", widget: "image", required: false }
-      - { label: "Embed Video Link", name: "video", widget: "string", required: false, hint: "Paste YouTube embed or direct MP4 URL" }
+      - { label: "Embed Video Link", name: "video", widget: "string", required: false, hint: "Paste YouTube link or direct video file URL" }
 
   - name: "journey"
     label: "Goals & Journey Path"
@@ -27,4 +27,3 @@ collections:
     fields:
       - { label: "Milestone Target Title", name: "title", widget: "string" }
       - { label: "Target Date / Year", name: "year", widget: "string" }
-      - { label: "Goal and Progress Details", name: "body", widget: "text" }
