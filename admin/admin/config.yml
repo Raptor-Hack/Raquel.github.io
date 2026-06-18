@@ -1,0 +1,29 @@
+backend:
+  name: github
+  repo: Raptor-Hack/Raquel.github.io # Connects directly to your github repo
+  branch: main
+
+media_folder: "images/uploads" # Where your portfolio photos will save
+public_folder: "/images/uploads"
+
+collections:
+  - name: "projects"
+    label: "Portfolio Projects"
+    folder: "_projects"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Project Title", name: "title", widget: "string" }
+      - { label: "Category Tag", name: "tag", widget: "select", options: ["Computer Science", "Web Developer", "Web Design", "App Developer", "UX Designer", "Cybersecurity"] }
+      - { label: "Description", name: "body", widget: "text" }
+      - { label: "Project Image", name: "image", widget: "image", required: false }
+      - { label: "Project Video URL", name: "video", widget: "string", required: false, hint: "Paste YouTube or Vimeo link here" }
+
+  - name: "journey"
+    label: "My Goals & Journey Path"
+    folder: "_journey"
+    create: true
+    fields:
+      - { label: "Milestone Title", name: "title", widget: "string" }
+      - { label: "Target Year", name: "year", widget: "string" }
+      - { label: "Goal Details", name: "body", widget: "text" }
