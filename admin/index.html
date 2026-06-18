@@ -3,12 +3,20 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Raquel's Core System Admin</title>
+    <title>Raquel's Core Portfolio Workspace Admin</title>
+    <!-- 1. Enforce CSS layouts so the dashboard can render on screen -->
+    <style>
+        html, body { background-color: #1e293b !important; margin: 0; padding: 0; }
+        #nc-root { min-height: 100vh; }
+    </style>
     
     </script>
 </head>
 <body>
-    <!-- Inject Decap CMS Core UI Layout Script Engines -->
-    <script src="https://unpkg.com@^3.0.0/dist/decap-cms.js"></script>
+    <!-- Target container layout element where Decap builds your form fields -->
+    <div id="nc-root"></div>
+
+    <!-- 3. Inject Decap CMS Core UI Layout Script Engines -->
+    <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
 </body>
 </html>
