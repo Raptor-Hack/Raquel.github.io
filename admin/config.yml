@@ -1,0 +1,30 @@
+backend:
+  name: github
+  repo: Raptor-Hack/Raquel.github.io
+  branch: main
+
+media_folder: "images/uploads"
+public_folder: "/images/uploads"
+
+collections:
+  - name: "projects"
+    label: "Production Projects"
+    folder: "_projects"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Project Title", name: "title", widget: "string" }
+      - { label: "Category Skill Tag", name: "tag", widget: "select", options: ["Computer Science", "Web Developer", "Web Design", "App Developer", "UX Designer", "Cybersecurity"] }
+      - { label: "Project Summary", name: "body", widget: "text" }
+      - { label: "Upload Feature Image", name: "image", widget: "image", required: false }
+      - { label: "Embed Video Link", name: "video", widget: "string", required: false, hint: "Paste YouTube embed or direct MP4 URL" }
+
+  - name: "journey"
+    label: "Goals & Journey Path"
+    folder: "_journey"
+    create: true
+    slug: "{{year}}-{{slug}}"
+    fields:
+      - { label: "Milestone Target Title", name: "title", widget: "string" }
+      - { label: "Target Date / Year", name: "year", widget: "string" }
+      - { label: "Goal and Progress Details", name: "body", widget: "text" }
